@@ -57,20 +57,6 @@ export default function Registro(){
       })
     }
 
-    const botonRegistro = () => {
-      axios
-      .post("http://localhost:3001/autenticacion/login", {
-        correo: correo,
-        contrasena: contrasena,
-      })
-      .then(function (response) {
-        SessionDataStorage(response.data.access_token, "token");
-        SessionDataStorage(response.data.nombre, "nombre");
-        router.push("/home");
-      })
-      .catch(function (error) {});
-    } 
-
     return (
       <div className="container">
       <div className="contenedor-principal mx-auto">
@@ -86,10 +72,9 @@ export default function Registro(){
           <Input className="contrasena" type="password" hint="Contraseña" id="userContrasena" handleInput={handleContrasena}/>
           <Input className="contrasena2" type="password" hint="Repetir Contraseña" id="userContrasena2" handleInput={handleRepetirContrasena}/>
           <div className="divboton"> 
-            <Boton texto = "Registrarse" callBack={botonRegistro}/>
+            <Boton texto = "Registrarse" callBack={registrar}/>
           </div>
           <div className="ingreso">¿Ya eres miembro? <a href="C:\Users\57321\Desktop\PROYECTO\mifrontend\src\pages\login.tsx">Ingresa aquí</a></div>
-          
         </form>
     </div>
     </div>

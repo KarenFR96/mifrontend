@@ -1,36 +1,18 @@
 "use client";
 import axios from "axios";
 import '@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css'
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const Home = async () => {
-    var log = [{ nombres: "", apellidos: "", correo: "" }];
-    await axios
-      .get(`http://localhost:3001/usuarios`)
-      .then(function (response) {
-        console.log(response.data);
-        log = response.data;
-      })
-      .catch(function (error) {});
+  const router = useRouter();
 
-      React.useEffect(() => {
-        }, []);
+  const [productos, setProductos] = useState([{ nombre: "", precio: 0, descripcion:"", especificaciones_tecnicas:"", id:0}]);
 
-    return (
-      <div>
-        <table className="table" border={5}>
-          {log.map((number) => (
-            <tr key={number.toString()}>
-              <td>{number.apellidos}</td>
-              <td>{number.nombres}</td>
-              <td>{number.correo}</td>
-            </tr>
-          ))}
-        </table>
-      </div>
-    );
-  };
+    axios.get("http://localhost:3001/productos")
+    .then((response) => {
+        setProductos(response.data)
+    })
 
   return (
     <div className="container">

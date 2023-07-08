@@ -1,5 +1,4 @@
 "use client";
-import Home from "@/pages/home";
 import Login from "@/pages/login";
 import Registro from "@/pages/registro";
 import Productos from "@/pages/productos";
@@ -7,6 +6,7 @@ import Inventario from "@/pages/inventario";
 import React from "react";
 import {BrowserRouter,Route,Routes,} from "react-router-dom";
 import Usuarios from "@/pages/usuarios";
+import Home from "@/pages/home";
 
 export default function App() {
   return (
@@ -15,7 +15,6 @@ export default function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={Home()} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/inventario" element={<Inventario />} />
