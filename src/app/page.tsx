@@ -8,12 +8,13 @@ import {BrowserRouter,Route,Routes,} from "react-router-dom";
 import Usuarios from "@/pages/usuarios";
 import Home from "@/pages/home";
 
+
 export default function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/productos" element={<Productos />} />

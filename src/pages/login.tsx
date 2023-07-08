@@ -1,10 +1,11 @@
 "use client";
+import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
+import "@/pages/css/login.css";
+import "@/app/globals.css"
+import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
-import "@/pages/css/login.css";
-import "bootstrap/dist/css/bootstrap.css";
 import Boton from "@/app/componentes/boton/boton";
 import Input from "@/app/componentes/inputs/input";
 import logo from "@/app/assets/shopTech.jpg";
@@ -12,11 +13,11 @@ import Image from "next/image";
 
 export default function Login() {
   const router = useRouter();
-  React.useEffect(() => {
-    if (sessionStorage.getItem("toker") !== undefined) {
-      router.push("home");
-    }
-  }, []);
+  // React.useEffect(() => {
+  //   if (sessionStorage.getItem("token") !== undefined) {
+  //     router.push("home");
+  //   }
+  // }, []);
 
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");

@@ -1,20 +1,23 @@
 "use client"
 import axios from "axios";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from "react";
 import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
 import "@/pages/css/productos.css";
 import Image from "next/image";
 import foto from "@/app/assets/foto.jpg"
+import NavBar from "@/app/componentes/navbar";
 
 export default function Productos() {
 
     const [productos, setProductos] = useState([{ nombre: "", precio: 0, descripcion:"", especificaciones_tecnicas:"", id:0}]);
 
-    axios.get("http://localhost:3001/productos")
-    .then((response) => {
-        setProductos(response.data)
-    })
+    React.useEffect(()=>{
+        axios.get("http://localhost:3001/productos")
+        .then((response) => {
+            setProductos(response.data)
+        })  
+    },[])
 
     const tabla = productos.map((producto, i ) => (
         <tr key = {i}>
@@ -28,33 +31,7 @@ export default function Productos() {
 
     return (
         <div>
-        <div className="navegacion">
-            <ul>
-                <li>
-                    <a href="#">
-                        <b><span className="titulo">ZTechnology</span></b>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="src\pages\inventario.tsx">
-                        <span className="titulo">Inventario</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="src\pages\productos.tsx">
-                        <span className="titulo">Productos</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span className="titulo">Cerrar sesión</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <NavBar/>
         
        {/*<-- ========================= barraSuperior ==================== -->*/}
         <div className="barraSuperior">
