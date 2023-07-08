@@ -1,29 +1,30 @@
 import Image from "next/image";
 import foto from "@/app/assets/foto.jpg"
-
 import 'bootstrap/dist/css/bootstrap.css';
 import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
 import "@/pages/css/productos.css";
+import { useRouter } from "next/router";
 
 export default function NavBar() {
+    const router = useRouter();
     return (
         <div>
             <div className="navegacion">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a onClick={() =>{router.push("/home")}}>
                             <b><span className="titulo">ZTechnology</span></b>
                         </a>
                     </li>
 
                     <li>
-                        <a href="src\pages\inventario.tsx">
+                        <a onClick={() => {router.push ("/inventario")}}>
                             <span className="titulo">Inventario</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="src\pages\productos.tsx">
+                        <a onClick={() => {router.push ("/productos")}}>
                             <span className="titulo">Productos</span>
                         </a>
                     </li>

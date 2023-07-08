@@ -1,99 +1,67 @@
-"use client"
+"use client";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
 import "@/pages/css/inventario.css";
-import Image from "next/image";
-import foto from "@/app/assets/foto.jpg"
+import NavBar from "@/app/componentes/navbar";
+import React from "react";
+import Boton from "@/app/componentes/boton/boton";
 
 export default function Inventario() {
+  const [inventario, setInventario] = useState([
+    {
+      nombre: "",
+      precio: 0,
+      cantidad_inicial: "",
+      vendidos: "",
+      cantidad_actual: "",
+      id: 0,
+    },
+  ]);
+  React.useEffect(() => {
+    axios.get("http://localhost:3001/inventario").then((response) => {
+      setInventario(response.data);
+    });
+  }, []);
 
-    const [inventario, setInventario] = useState([{ nombre: "", precio: 0, cantidad_inicial:"", vendidos:"", cantidad_actual:"", id:0}]);
+  const tabla = inventario.map((inventario, i) => (
+    <tr key={i}>
+      <td>{inventario.id}</td>
+      <td>{inventario.nombre}</td>
+      <td>{inventario.precio}</td>
+      <td>{inventario.cantidad_inicial}</td>
+      <td>{inventario.cantidad_actual}</td>
+    </tr>
+  ));
 
-    axios.get("http://localhost:3001/inventario")
-    .then((response) => {
-        setInventario(response.data)
-    })
+  return (
+    <div>
+      <NavBar />
 
-    const tabla = inventario.map((inventario, i ) => (
-        <tr key = {i}>
-        <td>{inventario.id}</td>
-        <td>{inventario.nombre}</td>
-        <td>{inventario.precio}</td>
-        <td>{inventario.cantidad_inicial}</td>
-        <td>{inventario.cantidad_actual}</td>
-        </tr>
-    ))
-
-    return (
-        <div>
-        <div className="navegacion">
-            <ul>
-                <li>
-                    <a href="#">
-                        <b><span className="titulo">ZTechnology</span></b>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="src\pages\inventario.tsx">
-                        <span className="titulo">Inventario</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="src\pages\productos.tsx">
-                        <span className="titulo">Productos</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span className="titulo">Cerrar sesión</span>
-                    </a>
-                </li>
-            </ul>
+      {/*<!-- ================ Inventario ================= -->*/}
+      <div className="lista offset-md-3">
+        <div className="listaP container">
+          <div className="tituloLista">
+            <h2>Inventario</h2>
+            <Boton texto="agregar inventario" callBack={()=>{}}/>
+          </div>
+         
+          <table className="table table.striped">
+            <thead>
+              <tr>
+                <td>Codigo</td>
+                <td>Producto</td>
+                <td>Precio</td>
+                <td>Cantidad inicial</td>
+                <td>Vendidos</td>
+                <td>Cantidad actual</td>
+              </tr>
+            </thead>
+            <tbody>{tabla}</tbody>
+          </table>
         </div>
-
-       {/*<-- ========================= barraSuperior ==================== -->*/}
-        <div className="barraSuperior">
-            <div className="topbar">
-
-                <div className="botones">
-                        <li><button type="button">Mejorar plan</button></li>
-                        <li><button type="button" >Contáctanos</button></li>
-                </div>
-                <div className="usuario">
-                <Image className="imagen" src={foto} alt="logo"/> 
-                </div>
-            </div>
-
-           {/*<!-- ================ Inventario ================= -->*/}
-           <div className="lista">
-                <div className="listaP">
-                    <div className="tituloLista">
-                        <h2>Inventario</h2>
-                    </div>
-        
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Codigo</td>
-                                <td>Producto</td>
-                                <td>Precio</td>
-                                <td>Cantidad inicial</td>
-                                <td>Vendidos</td>
-                                <td>Cantidad actual</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {tabla}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    )
+  );
 }

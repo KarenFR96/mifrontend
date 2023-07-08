@@ -38,7 +38,7 @@ export default function Login() {
     axios
       .post("http://localhost:3001/autenticacion/login", {
         correo: correo,
-        contrasena: contrasena,
+        contrena: contrasena,
       })
       .then(function (response) {
         SessionDataStorage(response.data.access_token, "token");

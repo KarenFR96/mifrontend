@@ -9,9 +9,12 @@ import Boton from '@/app/componentes/boton/boton'
 import Input from "@/app/componentes/inputs/input";
 import logo from "@/app/assets/shop.jpg"
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 
 export default function Registro() {
+  const router = useRouter();
+
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [correo, setCorreo] = useState('');
@@ -74,7 +77,7 @@ export default function Registro() {
             <div className="divboton">
               <Boton texto="Registrarse" callBack={registrar} />
             </div>
-            <div className="ingreso">¿Ya eres miembro? <a href="C:\Users\57321\Desktop\PROYECTO\mifrontend\src\pages\login.tsx">Ingresa aquí</a></div>
+            <div className="ingreso">¿Ya eres miembro? <a onClick = {() => {router.push("/login")}}>Ingresa aquí</a></div>
           </form>
         </div>
       </div>
