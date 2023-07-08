@@ -1,0 +1,175 @@
+.logo{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    font-weight:bolder;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: radial-gradient(#4440F4, #2BA5EA);
+    margin-top: 0;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+}
+
+.imagen {
+    width: 50%;
+    height: 100%;
+    box-shadow: 14px 0px 34px 0px rgba(0, 0, 0, 0.25);
+}
+
+.login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.correo {
+    margin: auto;
+    margin-top: 40px !important;
+    margin-bottom: 35px !important;
+}
+
+.contrasena {
+    margin: auto;
+    margin-bottom: 0.2em;
+}
+
+Input {
+    width: 90% !important;
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: gray thin solid;
+    text-align: left;
+    outline: none;
+    padding: .2rem 0;
+    font-size: 1em;
+    color: white;
+}
+
+.botonIniciar {
+    background-color:#4440F4 !important;
+    color: black;
+    width: 200px !important;
+    height: 30px !important;
+    display:grid;
+    place-items: center center;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    margin: auto;
+    margin-top:  90px;
+    transition: all .3s ease-in;
+    color: #fff;
+    border-radius: 60px;
+}
+
+.formulario button:hover{
+    color:black;
+    
+}
+
+h2{
+    color: #151515;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-top: 80px;
+}
+
+.lineaTitulo{
+    width: 70%;
+    height: 4px;
+    border: 0 none;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #4440F4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.olvidarContrasena {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 35px;
+    margin-top: 10px;
+    color: #4440F4;
+    font-size: 0.6em;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.registropLogin{
+    color: #000;
+    font-size:10px;
+    font-style: normal;
+    font-weight: 700;
+    margin: auto;
+    padding-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(25, 0, 255, 0.774);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:828px) {
+    .imagen{
+        display: none;
+    }
+
+    .container {
+        width: 80%;
+        height: 60%;
+        margin-top: 3rem;
+    }
+
+    .login{
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width:600px) {
+   
+    .container {
+        width: 90%;
+        height: 60%;
+        margin-top: 3rem;
+    }
+
+    .login{
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width:400px) {
+   
+    .container {
+        width: 100%;
+        height: 70%;
+        margin-top: 3rem;
+    }
+
+    .login{
+        width: 100%;
+    }
+}
+

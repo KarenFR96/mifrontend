@@ -1,0 +1,19 @@
+.boton{
+    background-color:#4440F4 !important;
+    color: black;
+    display:grid;
+    place-items: center center;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    margin: auto;
+    transition: all .3s ease-in;
+    color: #fff;
+    border-radius: 60px;
+}
+
+.boton:hover{
+    color:black;
+    cursor: pointer;
+    
+}

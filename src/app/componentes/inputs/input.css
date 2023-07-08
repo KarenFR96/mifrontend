@@ -1,0 +1,12 @@
+.input {
+    width: 90%;
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: gray thin solid;
+    text-align: left;
+    outline: none;
+    padding: .2rem 0;
+    font-size: 1em;
+    color: white;
+}

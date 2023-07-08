@@ -1,0 +1,148 @@
+.logo{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    font-weight:bolder;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: radial-gradient(#4440F4, #2BA5EA);
+    margin-top: 0;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+}
+
+.crearCuenta {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+}
+
+.imagen {
+    width: 50%;
+    box-shadow: 14px 0px 34px 0px rgba(0, 0, 0, 0.25);
+}
+
+.email, .nombres, .apellidos ,.contrasena, .contrasena2{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.registro{
+    color: #151515;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+hr{
+    width: 70%;
+    height: 4px;
+    border: 0 none;
+    margin-bottom: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #4440F4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.divboton {
+    background-color:#4440F4 !important;
+    color: black;
+    width: 200px !important;
+    height: 30px !important;
+    display:grid;
+    place-items: center center;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    margin: auto;
+    margin-top:  50px;
+    transition: all .3s ease-in;
+    color: #fff;
+    border-radius: 60px;
+}
+
+
+.ingreso {
+    color: #000;
+    font-size: 0.6em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 5px;
+}
+
+.alpresionar {
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(25, 0, 255, 0.774);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width:828px) {
+    .imagen{
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        height: 60%;
+    }
+
+    .crearCuenta{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .imagen{
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        height: 60%;
+    }
+
+    .crearCuenta{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .imagen{
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        height: 70%;
+        margin-top: 3rem;
+    }
+
+    .crearCuenta {
+        width: 100%;
+    }
+}
+
