@@ -2,7 +2,6 @@ import Boton from "@/app/componentes/boton/boton";
 import Input from "@/app/componentes/inputs/input";
 import "@/app/componentes/inputs/input.css"
 import NavBar from "@/app/componentes/navbar";
-import { handleClientScriptLoad } from "next/script";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";

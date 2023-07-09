@@ -86,7 +86,7 @@ export default function Login() {
             </div>
             <div className="registropLogin">
               ¿No eres un miembro todavía?{" "}
-              <a href="C:\Users\57321\Desktop\PROYECTO\mifrontend\src\pages\registro.tsx">
+              <a onClick = {() => {router.push("/registro")}}>
                 Registrate aquí
               </a>
             </div>

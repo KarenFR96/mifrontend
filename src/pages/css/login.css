@@ -1,3 +1,8 @@
+.container {
+    position: relative;
+    width: 100%;
+  }
+
 .logo{
     width:100%;
     display:flex;
@@ -120,12 +125,12 @@ h2{
 }
 
 a{
-    text-decoration: none;
-    color: rgba(25, 0, 255, 0.774);
+    text-decoration: none !important;
+    color: rgba(25, 0, 255, 0.774) !important;
 }
 
 a:hover{
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 @media screen and (max-width:828px) {

@@ -1,10 +1,11 @@
 "use client";
 import "bootstrap/dist/css/bootstrap.css"
+import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
+import "@/pages/css/registro.css";
+import "@/app/globals.css"
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
-import "@/pages/css/registro.css";
 import Boton from '@/app/componentes/boton/boton'
 import Input from "@/app/componentes/inputs/input";
 import logo from "@/app/assets/shop.jpg"

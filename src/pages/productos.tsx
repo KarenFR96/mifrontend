@@ -57,7 +57,6 @@ export default function Productos() {
                 <td>Especificaciones técnicas</td>
               </tr>
             </thead>
-
             <tbody>{tabla}</tbody>
           </table>
         </div>

@@ -37,6 +37,18 @@
     
 }
 
+Input {
+    width: 90% !important;
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: gray thin solid;
+    text-align: left;
+    outline: none;
+    padding: .2rem 0;
+    font-size: 1em;
+}
+
 .registro{
     color: #151515;
     text-align: center;
@@ -91,12 +103,12 @@ hr{
 }
 
 a{
-    text-decoration: none;
-    color: rgba(25, 0, 255, 0.774);
+    text-decoration: none !important;
+    color: rgba(25, 0, 255, 0.774) !important;
 }
 
 a:hover{
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 

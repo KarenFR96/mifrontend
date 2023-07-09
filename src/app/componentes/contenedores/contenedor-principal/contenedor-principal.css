@@ -1,9 +1,9 @@
-
 .contenedor-principal {
-    display: flex;
-    width: 60%;
-    margin-top: 5% ;
-    margin-bottom: 5% ;
-    height: 500px;
-    background-color: #FFFFFF!important;
+  display: flex !important;
+  width: 60% !important;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important ;
+  height: 500px !important;
+  background-color: white !important;
+  border-radius: 5px !important;
 }

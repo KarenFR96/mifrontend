@@ -4,9 +4,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
 import "@/pages/css/usuarios.css";
-import Image from "next/image";
-import foto from "@/app/assets/foto.jpg";
 import React from "react";
+import NavBar from "@/app/componentes/navbar";
 
 export default function Usuarios() {
   const [usuarios, setUsuarios] = useState([
@@ -34,60 +33,9 @@ export default function Usuarios() {
 
   return (
     <div>
-      <div className="navegacion">
-        <ul>
-          <li>
-            <a href="#">
-              <b>
-                <span className="titulo">ZTechnology</span>
-              </b>
-            </a>
-          </li>
-
-          <li>
-            <a href="src\pages\usuarios.tsx">
-              <span className="titulo">Usuarios</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="src\pages\inventario.tsx">
-              <span className="titulo">Inventario</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="src\pages\productos.tsx">
-              <span className="titulo">Productos</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <span className="titulo">Cerrar sesión</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {/*<-- ========================= barraSuperior ==================== -->*/}
-      <div className="barraSuperior">
-        <div className="topbar">
-          <div className="botones">
-            <li>
-              <button type="button">Mejorar plan</button>
-            </li>
-            <li>
-              <button type="button">Contáctanos</button>
-            </li>
-          </div>
-          <div className="usuario">
-            <Image className="imagen" src={foto} alt="logo" />
-          </div>
-        </div>
-
-        {/*<!-- ================ Lista de usuarios ================= -->*/}
-        <div className="lista">
+      <NavBar />
+      {/*<!-- ================ Lista de usuarios ================= -->*/}
+        <div className="lista offset-md-2">
           <div className="usuarios">
             <div className="tituloLista">
               <h2>Usuarios</h2>
@@ -107,6 +55,5 @@ export default function Usuarios() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

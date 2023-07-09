@@ -2,7 +2,7 @@ import Image from "next/image";
 import foto from "@/app/assets/foto.jpg"
 import 'bootstrap/dist/css/bootstrap.css';
 import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
-import "@/pages/css/productos.css";
+import "@/app/componentes/navbar.css"
 import { useRouter } from "next/router";
 
 export default function NavBar() {
@@ -20,6 +20,12 @@ export default function NavBar() {
                     <li>
                         <a onClick={() => {router.push ("/inventario")}}>
                             <span className="titulo">Inventario</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a onClick={() => {router.push ("/producto_crear")}}>
+                            <span className="titulo">Crear productos</span>
                         </a>
                     </li>
 
