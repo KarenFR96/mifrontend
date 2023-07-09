@@ -7,8 +7,8 @@ import Productos from "./productos";
 
 export default function Home() {
   return (
-    <div className="row">
-      <div className="contenedor-principal mx-auto">
+    <div className="">
+      <div className="">
        <NavBar/>
        <Productos/>
       </div>

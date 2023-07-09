@@ -2,12 +2,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "@/app/componentes/contenedores/contenedor-principal/contenedor-principal.css";
 import "@/pages/css/productos.css";
 import NavBar from "@/app/componentes/navbar";
 import Boton from "@/app/componentes/boton/boton";
 import { useRouter } from "next/router";
-
 export default function Productos() {
   const router = useRouter();
   const [productos, setProductos] = useState([
@@ -41,11 +39,16 @@ export default function Productos() {
       <NavBar />
 
       {/*<!-- ================ Lista de Productos ================= -->*/}
-      <div className="lista  offset-md-2">
+      <div className="lista  offset-md-3">
         <div className="infoProductos container">
           <div className="listadoHeader">
             <h2>Listado de Productos</h2>
-            <Boton texto="agregar inventario" callBack={()=>{router.push("/producto_crear")}}/>
+            <Boton
+              texto="agregar inventario"
+              callBack={() => {
+                router.push("/producto_crear");
+              }}
+            />
           </div>
           <table>
             <thead>

@@ -1,89 +1,82 @@
-
 /* =============== Globals ============== */
 * {
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-      
-      --blanco: white;
-      --azul: #0061c6;
-  
-  }
-  
-  body {
-    min-height: 100vh;
-    overflow-x: hidden;
-  
-  }
-  
-  .container {
-    position: relative;
-    width: 100%;
-  }
- 
-  
-  
-  /* ================== Lista de productos ============== */
-  
-   .lista {
-        position: absolute;
-        top: 4rem;
-        left: 5rem;
-        width: 90%;
-        padding: 20px;
-  
-      } 
-      
-      .lista .infoProductos {
-        min-height: 500px;
-        background: var(--blanco);
-        padding: 20px;
-        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-        border-radius: 20px;
-      }
-      
-    
-      .listadoHeader h2 {
-        font-weight: 600;
-        font-size: 35px;
-        color: var(--azul);
-        margin-bottom: 50px;
-      }
-  
-    
-      .lista table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-    
-      .lista table thead td {
-        font-weight: 600;
-      }
-      .lista .infoProductos table tr {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      }
-      .lista .infoProductos table tr:last-child {
-        border-bottom: none;
-      }
-      .lista .infoProductos table tbody tr:hover {
-        background: var(--azul);
-        color: var(--blanco);
-      }
-      .lista .infoProductos table tr td {
-        padding: 10px;
-      }
-      .lista .infoProductos table tr td:last-child {
-        text-align: center;
-      }
-      .lista .infoProductos table tr td:nth-child(2) {
-        text-align: center;
-      }
-      .lista .infoProductos table tr td:nth-child(3) {
-        text-align: center;
-      }
-  
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blanco: white;
+  --azul: #0061c6;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ================== Lista de productos ============== */
+
+.lista {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+}
+
+.lista .infoProductos {
+  min-height: 500px;
+  background: var(--blanco);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.listadoHeader h2 {
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--azul);
+  margin-bottom: 50px;
+}
+
+.lista table {
+  width: 60%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.lista table thead td {
+  font-weight: 600;
+}
+.lista .infoProductos table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.lista .infoProductos table tr:last-child {
+  border-bottom: none;
+}
+.lista .infoProductos table tbody tr:hover {
+  background: var(--azul);
+  color: var(--blanco);
+}
+.lista .infoProductos table tr td {
+  padding: 10px;
+}
+.lista .infoProductos table tr td:last-child {
+  text-align: center;
+}
+.lista .infoProductos table tr td:nth-child(2) {
+  text-align: center;
+}
+.lista .infoProductos table tr td:nth-child(3) {
+  text-align: center;
+}
